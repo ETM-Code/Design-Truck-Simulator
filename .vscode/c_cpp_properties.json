@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/opt/wxwidgets/include", // General include directory for wxWidgets
+                "/opt/homebrew/opt/wxwidgets/lib/wx/include/osx_cocoa-unicode-3.2", // Specific wxWidgets build configuration
+                "/opt/homebrew/opt/wxwidgets/include/wx-3.2/**" // Specific version directory
+            ],
+            "defines": [
+                "WX_PRECOMP",
+                "__WXMAC__",
+                "__WXOSX__",
+                "__WXOSX_COCOA__",
+                "_FILE_OFFSET_BITS=64",
+                "__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0"
+            ],
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang++", // Apple clang compiler
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64" // Changed to reflect Apple Silicon architecture
+        }
+    ],
+    "version": 4
+}
